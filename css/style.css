@@ -771,6 +771,12 @@
 	margin:0;
 }
 
+#wpp:hover{
+	color: blue;
+	font-size: 17px;
+
+}
+
 /* Footer Section */
 .footer{
 	padding-top: 80px;
