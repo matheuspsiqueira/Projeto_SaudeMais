@@ -519,30 +519,39 @@
         </div>
         <div class="row">
             <div class="col-md-7">
-                <form class="contact-form">
-                   <div class="row">
-                      <div class="col-md-6">
-                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Seu nome">
-                         </div>
-                      </div>
-                      <div class="col-md-6">
-                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Seu e-mail">
-                         </div>
-                      </div>
-                   </div>
+                <form class="contact-form" action="https://formsubmit.co/3d6b8fbc8e18b4b1503043112157beb8" onsubmit="Salvar()" method="POST">
+                  <!--Desabilitar Captcha-->
+                  <input type="hidden" name="_captcha" value="false" style="display: none;">
+                  <!--Desabilitar Captcha-->
+                  <!--Não ir pra outra pagina-->
+                  <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html" style="display: none;">
+                  <!--Não ir pra outra pagina-->
+                  <!--Evitar spam-->
+                  <input type="text" name="_honey" style="display: none;">
+                  <!--Evitar spam-->
+                  <div class="row">
+                     <div class="col-md-6">
+                           <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Seu nome" name="nome">
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Seu e-mail" name="email">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-12">
+                           <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Assunto" name="assunto">
+                           </div>
+                        </div>
+                     </div>
                    <div class="row">
                       <div class="col-md-12">
                           <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Assunto">
-                          </div>
-                      </div>
-                   </div>
-                   <div class="row">
-                      <div class="col-md-12">
-                          <div class="form-group">
-                            <textarea class="form-control" placeholder="Mensagem"></textarea>
+                            <textarea class="form-control" placeholder="Mensagem" name="mensagem"></textarea>
                           </div>
                       </div>
                    </div>
@@ -577,8 +586,8 @@
                   <div class="icon">
                      <i class="fas fa-phone"></i>
                   </div>
-                  <h5>Telefone</h5>
-                  <p>21 97969-5502</p>
+                  <h5>WhatsApp</h5>
+                  <a href="https://api.whatsapp.com/send?1=pt_BR&phone=55 21983325929&text=Olá! Cheguei aqui pelo seu site e gostaria de solicitar um orçamento para o Plano SaúdeMais!" class="btn btn-outline-black">Clique aqui</a>
                </div>
                <!-- Contact Item End -->
             </div>
@@ -614,6 +623,12 @@
  </footer>
  <!-- Footer Section End -->
 
+
+ <script>
+   function Salvar() {
+       alert("Email enviado com sucesso!")
+   }
+</script>
 
 
 
